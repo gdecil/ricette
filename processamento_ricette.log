@@ -1,0 +1,22 @@
+2026-04-28 15:35:02,201 - ERROR - Errore inizializzazione database: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2026-04-28 15:38:10,137 - ERROR - Errore inizializzazione database: connection to server at "localhost" (::1), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+
+2026-04-28 16:01:36,099 - ERROR - Errore inizializzazione database: could not translate host name "localhost:5432" to address: Name or service not known
+
+2026-04-28 16:02:23,193 - INFO - Database cucina creato con successo
+2026-04-28 16:02:23,445 - INFO - Tabella ricette inizializzata correttamente
+2026-04-28 16:03:49,964 - INFO - Ricetta 'Spaghetti alla Carbonara' salvata con ID 1
+2026-04-28 16:03:50,431 - INFO - Ricetta 'Tiramisù' salvata con ID 2
+2026-04-28 16:03:50,438 - INFO - Inserite 2 ricette di prova con successo
+2026-04-28 16:42:51,998 - INFO - Tabelle database inizializzate correttamente
+2026-04-28 16:51:04,320 - WARNING - Fallita estrazione dati LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 16:51:04,836 - ERROR - Errore salvataggio ricetta '': column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 16:51:04,839 - ERROR - ERRORE: Impossibile processare completamente la ricetta 'Senza Titolo'. Dettaglio: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 16:51:05,011 - INFO - Inserite 1 ricette reali di prova dal PDF
