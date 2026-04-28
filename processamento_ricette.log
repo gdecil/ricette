@@ -20,3 +20,89 @@ LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
                                                              ^
 
 2026-04-28 16:51:05,011 - INFO - Inserite 1 ricette reali di prova dal PDF
+2026-04-28 17:33:05,068 - INFO - Lettura prime 30 pagine PDF
+2026-04-28 17:33:13,925 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:33:14,245 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:34:13,926 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:34:14,388 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:35:13,927 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:35:14,081 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:36:13,928 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:36:14,054 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:37:13,929 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:37:14,185 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:38:13,930 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:38:14,100 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:39:13,935 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:39:14,149 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:40:13,936 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:40:14,542 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:41:13,937 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:41:14,063 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:42:13,938 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:42:14,071 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:43:13,939 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:43:14,144 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:44:13,939 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:44:14,059 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:45:13,940 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:45:14,038 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:46:13,941 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:46:14,270 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:47:13,941 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:47:14,039 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:48:13,942 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:48:14,087 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
+2026-04-28 17:49:13,943 - WARNING - Fallita estrazione LLM: 'NoneType' object has no attribute 'generate_content'
+2026-04-28 17:49:14,201 - ERROR - Errore salvataggio ricetta: column "tempo_cottura" of relation "ricette" does not exist
+LINE 3: ...itolo, categoria, istruzioni, tempo_preparazione, tempo_cott...
+                                                             ^
+
