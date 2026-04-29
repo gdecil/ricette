@@ -1,0 +1,13 @@
+2026-04-29 12:08:59,924 - __main__ - INFO - Checkpoint caricato: 17 ricette già elaborate
+2026-04-29 12:08:59,925 - __main__ - INFO - ======================================================================
+2026-04-29 12:08:59,926 - __main__ - INFO - INIZIO ESTRAZIONE RICETTE
+2026-04-29 12:08:59,926 - __main__ - INFO - ======================================================================
+2026-04-29 12:08:59,926 - __main__ - INFO - Leggendo ricette.pdf...
+2026-04-29 12:09:03,041 - __main__ - INFO - Total pages: 1396
+2026-04-29 12:11:30,587 - __main__ - INFO - Estratti 1 possibili blocchi ricetta
+2026-04-29 12:11:30,592 - __main__ - INFO - Blocchi da processare: 1
+2026-04-29 12:13:32,819 - __main__ - WARNING - Timeout Ollama (tentativo 1/3)
+2026-04-29 12:15:36,991 - __main__ - WARNING - Timeout Ollama (tentativo 2/3)
+2026-04-29 12:17:43,091 - __main__ - WARNING - Timeout Ollama (tentativo 3/3)
+2026-04-29 12:17:43,095 - __main__ - ERROR - Parsing fallito dopo 3 tentativi
+2026-04-29 12:17:43,127 - __main__ - WARNING - Nessuna ricetta estratta
