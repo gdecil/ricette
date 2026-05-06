@@ -350,3 +350,18 @@ LINE 3: ...                  (titolo, categoria, istruzioni, fonte_url)
 LINE 3: ...                  (titolo, categoria, istruzioni, fonte_url)
                                                              ^
 
+2026-04-29 16:55:31,503 - INFO - ======================================================================
+2026-04-29 16:55:31,511 - INFO - ESTRAZIONE RICETTE OTTIMIZZATA (Pattern-based)
+2026-04-29 16:55:31,519 - INFO - ======================================================================
+2026-04-29 16:55:31,559 - INFO - Lettura ricette.pdf...
+2026-04-29 16:55:48,042 - INFO - Pagine da leggere: 1396
+2026-04-29 17:03:21,974 - INFO - Found 666 potential recipe dates
+2026-04-29 17:03:22,126 - INFO - Estratte 664 ricette
+2026-04-29 17:03:22,131 - INFO - 
+Estrazione completata: 664 ricette trovate
+2026-04-29 17:03:22,611 - INFO - 
+Salvataggio nel DB...
+2026-04-29 17:06:00,297 - INFO - 
+======================================================================
+2026-04-29 17:06:00,300 - INFO - COMPLETATO: 479 inserite, 185 duplicate
+2026-04-29 17:06:00,302 - INFO - ======================================================================
