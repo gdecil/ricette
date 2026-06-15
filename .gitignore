@@ -1,0 +1,81 @@
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Dependencies
+/.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+/build
+/dist
+/out
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage
+/coverage
+
+# Test results
+/test-results
+
+# Node.js
+.nyc_output
+.nyc_output/
+
+# npm
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/integrity
+
+# Local development
+.local
+
+# Database
+*.db
+*.sqlite
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+ENV/
+env/
+virtualenv/
+.venv/
