@@ -13,14 +13,13 @@ const extractRecipeInfo = async (rawText, url) => {
   try {
     // Check if Ollama is available
     try {
-      await axios.get(`${OLLAMA_URL}/api/tags`);
+      await axios.get(`${OLLAMA_URL}/api/tags`, { timeout: 5000 });
     } catch (err) {
       console.warn('Ollama is not available. Using fallback extraction.');
       return null;
     }
 
-    const prompt = `
-You are a helpful assistant that extracts structured recipe information from web content.
+    const prompt = `You are a helpful assistant that extracts structured recipe information from web content.
 Extract the following information from the provided text:
 
 1. Title - The name of the recipe
@@ -32,7 +31,7 @@ Extract the following information from the provided text:
 7. Difficulty - Easy, Medium, or Hard
 8. Category - Main dish, Side dish, Dessert, Soup, Salad, etc.
 
-Return the result as a JSON object with the following structure:
+Return ONLY a valid JSON object with the following structure (no markdown, no extra text):
 {
   "title": "Recipe name",
   "ingredients": ["ingredient 1", "ingredient 2"],
@@ -47,25 +46,14 @@ Return the result as a JSON object with the following structure:
 If information is not available in the text, use null for that field.
 
 Here is the text to analyze:
-${rawText.substring(0, 4000)}
-    `;
+${rawText.substring(0, 4000)}`;
 
     const response = await axios.post(
       `${OLLAMA_URL}/api/generate`,
       {
-        model: 'llama3',
+        model: process.env.OLLAMA_MODEL || 'llama3',
         prompt: prompt,
-        stream: false,
-        format: {
-          title: 'string',
-          ingredients: 'array',
-          instructions: 'array',
-          prep_time: 'number',
-          cook_time: 'number',
-          servings: 'number',
-          difficulty: 'string',
-          category: 'string'
-        }
+        stream: false
       },
       {
         timeout: 30000
@@ -81,14 +69,26 @@ ${rawText.substring(0, 4000)}
       if (jsonMatch) {
         result = jsonMatch[1];
       }
+    } else if (result.includes('```')) {
+      const jsonMatch = result.match(/```([\s\S]*?)```/);
+      if (jsonMatch) {
+        result = jsonMatch[1];
+      }
+    }
+    
+    // Find first { and last } to extract JSON object
+    const firstBrace = result.indexOf('{');
+    const lastBrace = result.lastIndexOf('}');
+    if (firstBrace !== -1 && lastBrace !== -1) {
+      result = result.substring(firstBrace, lastBrace + 1);
     }
     
     const extracted = JSON.parse(result.trim());
     
     return {
       title: extracted.title || 'Unknown Recipe',
-      ingredients: extracted.ingredients || [],
-      instructions: extracted.instructions || [],
+      ingredients: Array.isArray(extracted.ingredients) ? extracted.ingredients : [],
+      instructions: Array.isArray(extracted.instructions) ? extracted.instructions : [],
       prep_time: extracted.prep_time || null,
       cook_time: extracted.cook_time || null,
       servings: extracted.servings || null,
@@ -115,7 +115,7 @@ const fallbackExtract = (rawText, url) => {
   
   // Look for ingredient-related keywords
   const ingredients = [];
-  const ingredientKeywords = ['cup', 'tablespoon', 'teaspoon', 'ounce', 'pound', 'gram', 'kilogram', 'liter', 'ml', 'oz', 'lb'];
+  const ingredientKeywords = ['cup', 'tablespoon', 'teaspoon', 'ounce', 'pound', 'gram', 'kilogram', 'liter', 'ml', 'oz', 'lb', 'g', 'kg', 'ml', 'cucchiaio', 'cucchiaino', 'grammi'];
   
   sentences.forEach(sentence => {
     const trimmed = sentence.trim();
@@ -126,7 +126,7 @@ const fallbackExtract = (rawText, url) => {
 
   // Find longest sentences as instructions
   const sorted = sentences.sort((a, b) => b.length - a.length);
-  const instructions = sorted.slice(0, 10).map(s => s.trim());
+  const instructions = sorted.slice(0, 10).map(s => s.trim()).filter(s => s.length > 20);
 
   return {
     title: 'Extracted Recipe',

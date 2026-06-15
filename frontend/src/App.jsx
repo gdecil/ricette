@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { FaUtensils, FaPlus, FaList, FaScissors } from 'react-icons/fa';
 import axios from 'axios';
 
@@ -9,8 +9,21 @@ function App() {
   const [scrapedRecipes, setScrapedRecipes] = useState([]);
   const [activeTab, setActiveTab] = useState('scrape');
 
-  // API endpoint - uses Vite proxy in dev, backend URL in production
+  // API endpoint - uses Vite proxy in dev
   const API_URL = '/api/v1';
+
+  // Load saved recipes on mount
+  useEffect(() => {
+    const loadRecipes = async () => {
+      try {
+        const response = await axios.get(`${API_URL}/recipes`);
+        setRecipes(response.data);
+      } catch (error) {
+        console.error('Error loading recipes:', error);
+      }
+    };
+    loadRecipes();
+  }, []);
 
   const handleScrape = async () => {
     if (!url) {
@@ -38,8 +51,9 @@ function App() {
       await axios.post(`${API_URL}/recipes`, {
         title: recipe.title,
         url: recipe.url,
-        ingredients: recipe.ingredients || [],
-        instructions: recipe.instructions || [],
+        summary: recipe.summary,
+        ingredients: Array.isArray(recipe.ingredients) ? recipe.ingredients : [],
+        instructions: Array.isArray(recipe.instructions) ? recipe.instructions : [],
         prep_time: recipe.prep_time,
         cook_time: recipe.cook_time,
         servings: recipe.servings,
@@ -64,7 +78,7 @@ function App() {
 
   const handleGetScraped = async () => {
     try {
-      const response = await axios.get(`${API_URL}/scrape/recipes`);
+      const response = await axios.get(`${API_URL}/scrape`);
       setScrapedRecipes(response.data);
     } catch (error) {
       console.error('Error getting scraped recipes:', error);
